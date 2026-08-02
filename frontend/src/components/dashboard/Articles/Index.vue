@@ -280,7 +280,7 @@ import { EyeIcon, EyeSlashIcon, DocumentTextIcon, PlusIcon } from '@heroicons/vu
 import Button from '@/components/dashboard/component/ui/Button.vue'
 import Card from '@/components/dashboard/component/ui/Card.vue'
 import ArticleForm from './ArticleForm.vue'
-import DeleteConfirmModal from '../../../components/dashboard/events/DeleteConfirmModal.vue'
+import DeleteConfirmModal from '../events/DeleteConfirmModal.vue'
 import ArticleSearchFilters from './ArticleSearchFilters.vue'
 import { useArticleStore } from '@/stores/articles'
 import type { Article } from '@/types/article'
