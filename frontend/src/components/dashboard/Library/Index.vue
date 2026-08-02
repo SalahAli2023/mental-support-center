@@ -356,7 +356,7 @@ import Card from '@/components/dashboard/component/ui/Card.vue';
 import LibraryCard from './LibraryCard.vue';
 import LibraryListItem from './LibraryListItem.vue';
 import UploadModal from './UploadModal.vue';
-import DeleteConfirmModal from '../events/DeleteConfirmModal.vue'
+import DeleteConfirmModal from '../Events/DeleteConfirmModal.vue'
 import {
     ArrowDownTrayIcon,
     MagnifyingGlassIcon,
