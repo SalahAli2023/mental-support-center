@@ -1429,8 +1429,8 @@ import { useAuthStore } from '@/stores/auth'
 import { useProfile } from '@/composables/useProfile'
 import { useTranslations } from '@/composables/useTranslations'
 import api from '@/utils/api'
-import Header from '@/components/frontend/layouts/Header.vue'  
-import Footer from '@/components/frontend/layouts/Footer.vue' 
+import Header from '@/components/frontend/layouts/header.vue'
+import Footer from '@/components/frontend/layouts/footer.vue' 
 
 export default {
   name: 'PatientSessions',

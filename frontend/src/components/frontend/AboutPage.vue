@@ -28,8 +28,8 @@
 </template>
 
 <script setup>
-import Header from '@/components/frontend/layouts/Header.vue'  
-import Footer from '@/components/frontend/layouts/Footer.vue' 
+import Header from '@/components/frontend/layouts/header.vue'  
+import Footer from '@/components/frontend/layouts/footer.vue' 
 import AboutHero from '@/components/frontend/about/AboutHero.vue'
 import AboutOverview from '@/components/frontend/about/AboutOverview.vue'
 import VisionMissionSection from '@/components/frontend/about/VisionMissionSection.vue'

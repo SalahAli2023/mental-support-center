@@ -67,14 +67,14 @@
 
 <script>
 import { ref, computed, onMounted, onUnmounted, watch } from 'vue'
-import Header from '@/components/frontend/layouts/Header.vue'  
+import Header from '@/components/frontend/layouts/header.vue'  
 import Hero from '@/components/frontend/layouts/hero.vue'
 import PopularMeasures from '@/components/frontend/measures/PopularMeasures.vue'
 import CategoryFilter from '@/components/frontend/measures/CategoryFilter.vue'
 import AllMeasuresContainer from '@/components/frontend/measures/AllMeasuresContainer.vue'
 import GuidelinesSection from '@/components/frontend/measures/GuidelinesSection.vue'
 import MeasureModal from '@/components/frontend/measures/MeasureModal.vue'
-import Footer from '@/components/frontend/layouts/Footer.vue' 
+import Footer from '@/components/frontend/layouts/footer.vue' 
 import { useScalesStore } from '@/stores/scales'
 import { useCategoriesStore } from '@/stores/categories' // استيراد store التصنيفات
 import { useRoute, useRouter } from 'vue-router'
