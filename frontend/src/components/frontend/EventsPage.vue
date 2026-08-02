@@ -45,8 +45,8 @@
 
 <script setup>
 import { ref, computed } from 'vue'
-import Header from '@/components/frontend/layouts/header.vue'
-import Footer from '@/components/frontend/layouts/footer.vue'
+import Header from '@/components/frontend/layouts/Header.vue'  
+import Footer from '@/components/frontend/layouts/Footer.vue' 
 import EventsFilter from '@/components/frontend/events/EventsFilter.vue'
 import EventsList from '@/components/frontend/events/EventsList.vue'
 import EventDetails from '@/components/frontend/events/EventDetails.vue'

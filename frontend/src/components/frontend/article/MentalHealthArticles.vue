@@ -62,8 +62,8 @@
 </template>
 
 <script>
-import Header from '@/components/frontend/layouts/header.vue'
-import Footer from '@/components/frontend/layouts/footer.vue'
+import Header from '@/components/frontend/layouts/Header.vue'  
+import Footer from '@/components/frontend/layouts/Footer.vue' 
 import Hero from '@/components/frontend/layouts/hero.vue'
 import ArticleCard from './ArticleCard.vue'
 import CategoryFilter from './CategoryFilter.vue'

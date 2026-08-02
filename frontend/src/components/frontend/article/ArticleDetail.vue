@@ -13,8 +13,8 @@
 
 <script>
 import ArticleDetailContent from './ArticleDetailContent.vue'
-import Header from '@/components/frontend/layouts/Header.vue'  
-import Footer from '@/components/frontend/layouts/Footer.vue'  
+import Header from '@/components/frontend/layouts/Header.vue'    
+import Footer from '@/components/frontend/layouts/Footer.vue'   
 
 export default {
   name: 'ArticleDetail',

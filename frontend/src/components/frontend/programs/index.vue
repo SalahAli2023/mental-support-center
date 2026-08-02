@@ -984,8 +984,8 @@
 <script setup>
 import { ref, computed, onMounted, watch } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
-import Header from '@/components/frontend/layouts/header.vue'
-import Footer from '@/components/frontend/layouts/footer.vue'
+import Header from '@/components/frontend/layouts/Header.vue'  
+import Footer from '@/components/frontend/layouts/Footer.vue' 
 import Hero from '@/components/frontend/layouts/hero.vue'
 import { useTranslations } from '@/composables/useTranslations'
 import api from '@/utils/api'

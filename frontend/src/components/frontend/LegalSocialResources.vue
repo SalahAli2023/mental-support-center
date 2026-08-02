@@ -279,9 +279,9 @@
 import { ref, computed, onMounted, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import { useTranslations } from '@/composables/useTranslations'
-import Header from '@/components/frontend/layouts/Header.vue'
+import Header from '@/components/frontend/layouts/Header.vue'  
 import Hero from '@/components/frontend/layouts/hero.vue'
-import Footer from '@/components/frontend/layouts/Footer.vue'
+import Footer from '@/components/frontend/layouts/Footer.vue' 
 
 const router = useRouter()
 const { translate } = useTranslations()

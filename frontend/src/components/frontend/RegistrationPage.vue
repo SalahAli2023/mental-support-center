@@ -38,7 +38,7 @@
 import { ref, computed, watch, onMounted, onUnmounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { t } from '@/locales'
-import Footer from '@/components/frontend/layouts/Footer.vue'
+import Footer from '@/components/frontend/layouts/Footer.vue' 
 import RegistrationForm from '@/components/frontend/auth/RegistrationForm.vue'
 
 const router = useRouter()
@@ -87,8 +87,8 @@ const handleRegistrationSuccess = () => {
 import { ref, computed } from 'vue'
 import { useRouter } from 'vue-router'
 import { t } from '@/locales'
-import Header from '@/components/frontend/layouts/Header.vue'
-import Footer from '@/components/frontend/layouts/Footer.vue'
+import Header from '@/components/frontend/layouts/Header.vue'  
+import Footer from '@/components/frontend/layouts/Footer.vue' 
 import RegistrationForm from '@/components/frontend/auth/RegistrationForm.vue'
 
 const router = useRouter()
