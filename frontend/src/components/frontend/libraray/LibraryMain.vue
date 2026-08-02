@@ -170,7 +170,7 @@
 </template>
 
 <script>
-import Header from '@/components/frontend/layouts/Header.vue'  
+import Header from '@/components/frontend/layouts/header.vue'  
 import Footer from '@/components/frontend/layouts/footer.vue' 
 import Hero from '@/components/frontend/layouts/hero.vue'
 import BookModal from '@/components/frontend/libraray/BookModal.vue'
