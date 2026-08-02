@@ -218,7 +218,7 @@ import { PlusIcon, TagIcon } from '@heroicons/vue/24/outline'
 import Button from '@/components/dashboard/component/ui/Button.vue'
 import Card from '@/components/dashboard/component/ui/Card.vue'
 import ArticleCategoryForm from './ArticleCategoryForm.vue'
-import DeleteConfirmModal from '@/components/dashboard/events/DeleteConfirmModal.vue'
+import DeleteConfirmModal from '../../../components/dashboard/events/DeleteConfirmModal.vue'
 import { useArticleStore } from '@/stores/articles'
 import type { ArticleCategory } from '@/types/article'
 

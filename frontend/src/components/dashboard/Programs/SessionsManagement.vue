@@ -68,7 +68,7 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
-import { programService } from '@/services/programService'
+import { programService } from '../../../services/programService'
 import SessionModal from './SessionModal.vue'
 import DeleteConfirmModal from './DeleteConfirmModal.vue'
 import { PlusIcon } from '@heroicons/vue/24/outline'
