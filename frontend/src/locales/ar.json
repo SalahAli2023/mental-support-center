@@ -1,0 +1,358 @@
+
+{
+  "programs": {
+    "hero": {
+      "title": "برامج الدعم",
+      "highlight": "النفسي",
+      "subtitle": "برامج نفسية احترافية مصممة لدعم رحلتك نحو الصحة النفسية"
+    },
+    "section": {
+      "title": "برامجنا النفسية",
+      "subtitle": "اختر من بين مجموعة برامج الدعم النفسي المبنية على الأدلة"
+    },
+    "featured": "مميز",
+    "popular": "الأكثر طلباً",
+    "new": "جديد",
+    "online": "أونلاين",
+    "emergency": "طوارئ",
+    
+    "duration": "المدة",
+    "frequency": "التكرار",
+    "modality": "النمط",
+    
+    "counseling": {
+      "title": "استشارات فردية",
+      "description": "جلسات فردية مع أخصائيين نفسيين مرخصين",
+      "duration": "8 جلسات",
+      "frequency": "أسبوعي",
+      "modality": "فردي"
+    },
+    
+    "stress": {
+      "title": "إدارة الإجهاد",
+      "description": "تعلم تقنيات إدارة الإجهاد والقلق",
+      "duration": "12 جلسة",
+      "frequency": "أسبوعي",
+      "modality": "جماعي"
+    },
+    
+    "group": {
+      "title": "العلاج الجماعي",
+      "description": "جلسات جماعية داعمة بخبرات مشتركة",
+      "duration": "10 جلسات",
+      "frequency": "أسبوعي",
+      "modality": "جماعي"
+    },
+    
+    "children": {
+      "title": "الأطفال والمراهقين",
+      "description": "برامج متخصصة للأطفال والمراهقين",
+      "duration": "16 جلسة",
+      "frequency": "مرتين أسبوعياً",
+      "modality": "فردي"
+    },
+    
+    "online": {
+      "title": "علاج أونلاين",
+      "description": "جلسات استشارية مرنة عبر الإنترنت",
+      "duration": "12 جلسة",
+      "frequency": "أسبوعي",
+      "modality": "أونلاين"
+    },
+    
+    "emergency": {
+      "title": "دعم الأزمات",
+      "description": "دعم نفسي فوري لحالات الطوارئ",
+      "duration": "حسب الحاجة",
+      "frequency": "24/7",
+      "modality": "طوارئ"
+    },
+    
+    "freeServices": {
+      "title": "جميع البرامج مجانية",
+      "subtitle": "لا توجد رسوم لأي خدمات دعم نفسي"
+    },
+    
+    "howToApply": {
+      "title": "كيفية التقديم",
+      "subtitle": "خطوات بسيطة لبدء رحلة الدعم النفسي"
+    },
+    
+    "steps": {
+      "apply": "تقديم الطلب",
+      "applyDesc": "قدم طلبك للبرنامج المختار",
+      "assessment": "تقييم أولي",
+      "assessmentDesc": "أكمل التقييم مع أخصائيينا",
+      "start": "بدء الجلسات",
+      "startDesc": "ابدأ جلساتك العلاجية"
+    }
+  },
+  
+  "buttons": {
+    "startJourney": "ابدأ رحلتك",
+    "learnMore": "اعرف المزيد",
+    "applyNow": "قدم الآن",
+    "emergencyCall": "اتصال طوارئ"
+  }
+,
+  "app": {
+    "title": "لوحة التحكم النفسية",
+    "search": "ابحث…",
+    "language": "اللغة",
+    "theme": "السمة",
+    "light": "فاتح",
+    "dark": "داكن"
+  },
+  "nav": {
+    "programs": "البرامج",
+    "allPrograms": "جميع البرامج",
+    "programCategories": "تصنيفات البرامج",
+    "newProgram": "برنامج جديد",
+    "dashboard": "لوحة التحكم",
+    "appointments": "المواعيد",
+    "sessions": "الجلسات",
+    "users": "المستخدمين",
+    "articles": "المقالات",
+   
+    "library": "المكتبة",
+    "events": "الفعاليات",
+    "assessments": "المقاييس",
+    "assessmentCategories": "تصنيف المقاييس",
+    "assessmentTypes": "أنواع المقاييس",
+    "assessmentResults": "نتائج المقاييس",
+    "legalResources": "الموارد القانونية",
+    "settings": "الإعدادات",
+    "dashboardMain": "لوحة التحكم الرئيسية",
+    "stats": "الإحصائيات",
+    "reports": "التقارير",
+    "allAppointments": "جميع المواعيد",
+    "upcomingAppointments": "المواعيد القادمة",
+    "appointmentHistory": "سجل المواعيد",
+    "allSessions": "جميع الجلسات",
+    "activeSessions": "الجلسات النشطة",
+    "sessionHistory": "سجل الجلسات",
+    "allUsers": "جميع المستخدمين",
+    "clients": "العملاء",
+    "therapists": "المعالجين",
+    "admins": "المشرفين",
+    "allArticles": "جميع المقالات",
+    "articleCategories": "تصنيفات المقالات",
+    "allPrograms": "جميع البرامج",
+    "therapyPrograms": "برامج العلاج",
+    "workshops": "ورش العمل",
+    "mainLibrary": "المكتبة الرئيسية",
+    "books": "الكتب",
+    "resources": "المصادر",
+    "media": "الوسائط",
+    "siteStats": "أرقام النجاح",
+    "userMessages": "رسائل المستخدمين",
+    "allEvents": "جميع الفعاليات",
+    "allLegalResources": "جميع الموارد",
+    "legalCategories": "تصنيفات الموارد",
+    "newLegalResource": "مورد جديد",
+    "allAssessments": "جميع المقاييس",
+    "scaleCategories": "تصنيفات المقاييس",
+    "assessmentResults": "نتائج المقاييس",
+    "generalSettings": "الإعدادات العامة",
+    "profile": "الملف الشخصي",
+    "security": "الأمان",
+    "notifications": "الإشعارات"
+  },
+  "loginModal": {
+    "emailPlaceholder": "",
+    "invalidCredentials": "البريد الإلكتروني أو كلمة المرور غير صحيحة",
+    "errorMessage": "حدث خطأ أثناء تسجيل الدخول. يرجى المحاولة مرة أخرى.",
+    "successMessage": "تم تسجيل الدخول بنجاح"
+  },
+  "therapists": {
+    "therapist": {
+      "book": "احجز",
+      "sessionDuration": "مدة الجلسة",
+      "minutes": "دقيقة",
+      "sessions": "جلسة",
+      "reviews": "تقييم",
+      "noRating": "لا يوجد تقييم بعد"
+    },
+    "hero": {
+      "title": "الأخصائيين",
+      "highlight": "المتخصصين",
+      "subtitle": "اختر المعالج المناسب لك"
+    },
+    "results": {
+      "showing": "عرض {count} معالج",
+      "noResults": "لا توجد نتائج",
+      "noResultsMessage": "جرب تعديل عوامل التصفية",
+      "showAll": "عرض الكل"
+    },
+    "specializations": {
+      "anxiety": "القلق والتوتر",
+      "depression": "الاكتئاب",
+      "ocd": "الوسواس القهري",
+      "addiction": "الإدمان",
+      "psychosomatic": "الأمراض النفسجسمانية",
+      "confidence": "ضعف الثقة بالنفس",
+      "teenagers": "مشكلات المراهقين",
+      "specialEducation": "التربية الخاصة",
+      "therapeutic": "العلاجية",
+      "various": "مشكلات منوعة"
+    }
+  },
+  "therapistProfile": {
+    "breadcrumb": {
+      "home": "الرئيسية",
+      "therapists": "الأخصائيين"
+    },
+    "profile": {
+      "affiliation": "الانتماء",
+      "sessionDuration": "مدة الجلسة",
+      "minutes": "دقيقة",
+      "aboutExpert": "عن الخبير",
+      "qualifications": "المؤهلات",
+      "reviews": "تقييم",
+      "sessions": "جلسة",
+      "noRating": "لا يوجد تقييم بعد"
+    },
+    "booking": {
+      "bookingSuccess": "تم الحجز بنجاح",
+      "date": "التاريخ",
+      "time": "الوقت",
+      "noDateSelected": "يرجى اختيار التاريخ والوقت"
+    },
+    "calendar": {
+      "months": "يناير,فبراير,مارس,أبريل,مايو,يونيو,يوليو,أغسطس,سبتمبر,أكتوبر,نوفمبر,ديسمبر",
+      "daysOfWeek": "أحد,إثنين,ثلاثاء,أربعاء,خميس,جمعة,سبت"
+    }
+  },
+  "buttons": {
+    "startJourney": "ابدأ رحلتك",
+    "learnMore": "اعرف المزيد"
+  },
+  "dashboard": {
+    "welcome": "مرحباً",
+    "kpi_upcoming": "الجلسات القادمة",
+    "kpi_clients": "العملاء",
+    "kpi_new_users": "مستخدمون جدد",
+    "quick_actions": "إجراءات سريعة",
+    "book_session": "حجز جلسة",
+    "create_article": "إنشاء مقال",
+    "add_user": "إضافة مستخدم"
+  },
+  "appointments": {
+    "bookSession": "حجز جلسة",
+    "allStatuses": "جميع الحالات",
+    "scheduled": "مجدولة",
+    "completed": "مكتملة",
+    "cancelled": "ملغاة",
+    "pending": "قيد الانتظار",
+    "confirmed": "مؤكدة",
+    "therapist": "المعالج",
+    "loading": "جاري التحميل...",
+    "list": "قائمة المواعيد",
+    "client": "العميل",
+    "date": "التاريخ",
+    "status": "الحالة",
+    "actions": "الإجراءات",
+    "edit": "تعديل",
+    "createSession": "إنشاء جلسة",
+    "noAppointments": "لا توجد مواعيد",
+    "editAppointment": "تعديل الموعد",
+    "selectClient": "اختر العميل",
+    "selectTherapist": "اختر المعالج",
+    "dateTime": "التاريخ والوقت",
+    "cancel": "إلغاء",
+    "save": "حفظ",
+    "saving": "جاري الحفظ...",
+    "selectDateTime": "يرجى اختيار التاريخ والوقت",
+    "saveError": "خطأ في الحفظ",
+    "confirmCreateSession": "هل تريد إنشاء جلسة فيديو للموعد مع {name}؟",
+    "sessionCreated": "تم إنشاء الجلسة بنجاح! يمكنك الآن بدء الجلسة من صفحة الجلسات.",
+    "sessionCreateError": "فشل إنشاء الجلسة",
+    "allTherapists": "كل المعالجين",
+    "allClients": "كل العملاء",
+    "loadingClients": "جاري تحميل العملاء...",
+    "loadingTherapists": "جاري تحميل المعالجين...",
+    "selectClientAndTherapist": "يرجى اختيار العميل والمعالج أولاً"
+  },
+  "library": {
+    "title": "المكتبة",
+    "subtitle": "مجموعة شاملة من المصادر والمراجع النفسية",
+    "total_items": "إجمالي العناصر",
+    "total_downloads": "إجمالي التحميلات",
+    "new_this_week": "جديد هذا الأسبوع",
+    "avg_rating": "متوسط التقييم",
+    "search_placeholder": "ابحث في المكتبة...",
+    "all_categories": "جميع التصنيفات",
+    "all_types": "جميع الأنواع",
+    "books": "كتب",
+    "research": "أبحاث",
+    "guides": "أدلة",
+    "articles": "مقالات",
+    "clear_all": "مسح الكل",
+    "showing": "عرض",
+    "of": "من",
+    "no_results": "لا توجد نتائج",
+    "no_results_desc": "جرب تعديل عوامل التصفية أو مصطلحات البحث",
+    "clear_filters": "مسح الفلاتر",
+    "sort": {
+      "newest": "الأحدث",
+      "popular": "الأكثر شيوعاً",
+      "rating": "الأعلى تقييماً",
+      "title": "حسب العنوان"
+    },
+    "types": {
+      "book": "كتاب",
+      "research": "بحث",
+      "guide": "دليل",
+      "article": "مقال"
+    },
+    "upload": {
+      "title": "رفع ملف جديد",
+      "subtitle": "أضف مورداً جديداً إلى المكتبة",
+      "complete": "مكتمل",
+      "dropzone_title": "اسحب وأفلت الملف هنا",
+      "dropzone_subtitle": "PDF, Word, Images, Videos (الحد الأقصى 50MB)",
+      "browse_files": "تصفح الملفات",
+      "remove_file": "إزالة الملف",
+      "title_ar": "العنوان (العربية)",
+      "title_ar_placeholder": "أدخل العنوان باللغة العربية...",
+      "title_en": "العنوان (الإنجليزية)",
+      "title_en_placeholder": "أدخل العنوان باللغة الإنجليزية...",
+      "category": "التصنيف",
+      "select_category": "اختر التصنيف",
+      "type": "النوع",
+      "select_type": "اختر النوع",
+      "author_ar": "المؤلف (العربية)",
+      "author_ar_placeholder": "اسم المؤلف بالعربية...",
+      "author_en": "المؤلف (الإنجليزية)",
+      "author_en_placeholder": "اسم المؤلف بالإنجليزية...",
+      "publish_date": "تاريخ النشر",
+      "pages": "عدد الصفحات",
+      "pages_placeholder": "أدخل عدد الصفحات...",
+      "description_ar": "الوصف (العربية)",
+      "description_ar_placeholder": "أدخل الوصف باللغة العربية...",
+      "description_en": "الوصف (الإنجليزية)",
+      "description_en_placeholder": "أدخل الوصف باللغة الإنجليزية...",
+      "cover_image": "صورة الغلاف",
+      "cover_upload": "رفع صورة الغلاف",
+      "cover_formats": "JPG, PNG, WebP (مستحسن 3:4)",
+      "mark_as_new": "تعليم كمورد جديد",
+      "publish_immediately": "نشر فوراً",
+      "supported_formats": "PDF, DOC, DOCX, JPG, PNG, MP4, MOV (الحد الأقصى 50MB)",
+      "cancel": "إلغاء",
+      "uploading": "جاري الرفع...",
+      "upload": "رفع الملف",
+      "edit_title": "تعديل العنصر",
+      "edit_subtitle": "تعديل بيانات العنصر الموجود",
+      "update": "تحديث"
+    }
+  },
+  "contact": {
+    "form": {
+      "types": {
+        "complaint": "شكوى",
+        "inquiry": "استفسار",
+        "review": "تقييم"
+      }
+    }
+  }
+}

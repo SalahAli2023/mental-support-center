@@ -1,0 +1,67 @@
+admin@therapy-platform.com
+Therapy@2025!Secure
+
+
+
+Options -MultiViews
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.html [L]
+</IfModule>
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^ index.php [L]
+</IfModule> 
+
+
+خلاص يا غالي انا الان عدلت كل شيء رفعت الفرونت والباك على الملف الجذر واشتغل وكل شيء تمام
+وعملت .htaccess مشترك للاثنين وهذا محتواه
+Options -MultiViews
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+
+# =========================
+# 1️⃣  لو الرابط يبدأ بـ /api
+# يروح إلى Laravel (index.php)
+# =========================
+RewriteCond %{REQUEST_URI} ^/api
+RewriteRule ^ index.php [L]
+
+# =========================
+# 2️⃣  لو الملف أو المجلد موجود فعلياً
+# لا تعد كتابة الرابط
+# =========================
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# =========================
+# 3️⃣  باقي الروابط تروح إلى Vue
+# =========================
+RewriteRule ^ index.html [L]
+</IfModule>
+
+الان كل شيء تمام مربوط فل
+
+http://localhost:8000/api/evrnts 
+يرجع JSON
+
+http://localhost:8000/measures
+يفتح صفحة المقاييس مع البايانات بشكل سليم
+
+http://localhost:8000/
+ينقلنا الى صفحة لارافل
+
+فقط اريد حل هذا http://localhost:8000/
+اريده بدل ما ينقلنا الى صفحة لارافل بنقلنا الى صفحة الفرونت الرئيسية

@@ -1,0 +1,158 @@
+# ==================== BACKEND ====================
+
+# Laravel
+/backend/.env
+/backend/.env.*
+/backend/storage/*.key
+/backend/storage/logs/*.log
+/backend/storage/framework/cache/data/*
+/backend/storage/framework/sessions/*
+/backend/storage/framework/views/*
+/backend/bootstrap/cache/*.php
+/backend/vendor/
+/backend/public/storage/
+/backend/public/hot
+/backend/public/.htaccess
+/backend/.phpunit.result.cache
+/backend/.env.backup
+/backend/.env.production
+
+# Laravel IDE Helper
+/backend/_ide_helper.php
+/backend/.phpstorm.meta.php
+
+# PHPUnit
+/backend/.phpunit.cache
+/backend/coverage/
+/backend/build/
+
+# ==================== FRONTEND ====================
+
+# Vue / Frontend
+/frontend/.env
+/frontend/.env.*
+/frontend/node_modules/
+/frontend/dist/
+/frontend/.vite/
+/frontend/.cache/
+/frontend/.output/
+
+# ==================== SIGNALING SERVER ====================
+
+# Signaling Server
+/signaling-server/.env
+/signaling-server/node_modules/
+/signaling-server/dist/
+/signaling-server/build/
+
+# ==================== ROOT ====================
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.sublime-*
+
+# Logs
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.bak
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Databases
+*.sqlite
+*.sqlite3
+*.db
+
+# Compressed files
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# Package manager
+package-lock.json
+yarn.lock
+
+# ==================== TESTING ====================
+
+/coverage/
+/cover/
+/test-reports/
+/test-results/
+
+# ==================== DEPLOYMENT ====================
+
+# Deploy scripts
+/deploy/
+/.deploy/
+/.serverless/
+
+# ==================== MISC ====================
+
+# Docker
+*.dockerignore
+*.dockerfile
+
+# CI/CD
+.gitlab-ci.yml
+.github/
+.git/
+!.gitkeep
+!.gitignore
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Backend
+backend/.env
+backend/storage/*.key
+backend/storage/logs/*.log
+
+# Frontend
+src/.env
+
+# Signaling
+signaling-server/.env
+

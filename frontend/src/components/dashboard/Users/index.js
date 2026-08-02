@@ -1,0 +1,11 @@
+// ملف تصدير جميع الـ components
+export { default as TherapistsManagement } from './TherapistsManagement.vue'
+export { default as TherapistsHeader } from './components/TherapistsHeader.vue'
+export { default as TherapistsFilters } from './components/TherapistsFilters.vue'
+export { default as TherapistsList } from './components/TherapistsList.vue'
+export { default as TherapistsTable } from './components/TherapistsTable.vue'
+export { default as TherapistCard } from './components/TherapistCard.vue'
+export { default as TherapistsPagination } from './components/TherapistsPagination.vue'
+export { default as TherapistModal } from './components/TherapistModal.vue'
+export { default as ScheduleModal } from './components/ScheduleModal.vue'
+export { default as ProfileModal } from './components/ProfileModal.vue'

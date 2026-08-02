@@ -1,0 +1,1817 @@
+{
+      "info": {
+            "_postman_id": "psychological-support-api",
+            "name": "Psychological Support Platform API",
+            "description": "Complete API collection for Psychological Support Platform",
+            "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+      },
+      "item": [
+            {
+                  "name": "Authentication",
+                  "item": [
+                        {
+                              "name": "Register",
+                              "request": {
+                                    "method": "POST",
+                                    "header": [
+                                          {
+                                                "key": "Content-Type",
+                                                "value": "application/json"
+                                          },
+                                          {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                          }
+                                    ],
+                                    "body": {
+                                          "mode": "raw",
+                                          "raw": "{\n    \"name\": \"John Doe\",\n    \"email\": \"john@example.com\",\n    \"password\": \"password\",\n    \"password_confirmation\": \"password\",\n    \"phone\": \"+967712345678\",\n    \"role\": \"Client\"\n}"
+                                    },
+                                    "url": {
+                                          "raw": "{{base_url}}/api/register",
+                                          "host": [
+                                                "{{base_url}}"
+                                          ],
+                                          "path": [
+                                                "api",
+                                                "register"
+                                          ]
+                                    }
+                              },
+                              "response": []
+                        },
+                        {
+                              "name": "Login",
+                              "event": [
+                                    {
+                                          "listen": "test",
+                                          "script": {
+                                                "exec": [
+                                                      "if (pm.response.code === 200) {",
+                                                      "    var jsonData = pm.response.json();",
+                                                      "    pm.environment.set(\"auth_token\", jsonData.token);",
+                                                      "    pm.environment.set(\"user_id\", jsonData.user.id);",
+                                                      "}"
+                                                ],
+                                                "type": "text/javascript"
+                                          }
+                                    }
+                              ],
+                              "request": {
+                                    "method": "POST",
+                                    "header": [
+                                          {
+                                                "key": "Content-Type",
+                                                "value": "application/json"
+                                          },
+                                          {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                          }
+                                    ],
+                                    "body": {
+                                          "mode": "raw",
+                                          "raw": "{\n    \"email\": \"admin@example.com\",\n    \"password\": \"password\"\n}"
+                                    },
+                                    "url": {
+                                          "raw": "{{base_url}}/api/login",
+                                          "host": [
+                                                "{{base_url}}"
+                                          ],
+                                          "path": [
+                                                "api",
+                                                "login"
+                                          ]
+                                    }
+                              },
+                              "response": []
+                        },
+                        {
+                              "name": "Logout",
+                              "request": {
+                                    "method": "POST",
+                                    "header": [
+                                          {
+                                                "key": "Authorization",
+                                                "value": "Bearer {{auth_token}}"
+                                          },
+                                          {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                          }
+                                    ],
+                                    "url": {
+                                          "raw": "{{base_url}}/api/logout",
+                                          "host": [
+                                                "{{base_url}}"
+                                          ],
+                                          "path": [
+                                                "api",
+                                                "logout"
+                                          ]
+                                    }
+                              },
+                              "response": []
+                        },
+                        {
+                              "name": "Get Current User",
+                              "request": {
+                                    "method": "GET",
+                                    "header": [
+                                          {
+                                                "key": "Authorization",
+                                                "value": "Bearer {{auth_token}}"
+                                          },
+                                          {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                          }
+                                    ],
+                                    "url": {
+                                          "raw": "{{base_url}}/api/user",
+                                          "host": [
+                                                "{{base_url}}"
+                                          ],
+                                          "path": [
+                                                "api",
+                                                "user"
+                                          ]
+                                    }
+                              },
+                              "response": []
+                        }
+                  ]
+            },
+            {
+                  "name": "Articles",
+                  "item": [
+                        {
+                              "name": "List Articles",
+                              "request": {
+                                    "method": "GET",
+                                    "header": [
+                                          {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                          },
+                                          {
+                                                "key": "Accept-Language",
+                                                "value": "ar",
+                                                "disabled": true
+                                          }
+                                    ],
+                                    "url": {
+                                          "raw": "{{base_url}}/api/articles?locale=ar&per_page=15&page=1",
+                                          "host": [
+                                                "{{base_url}}"
+                                          ],
+                                          "path": [
+                                                "api",
+                                                "articles"
+                                          ],
+                                          "query": [
+                                                {
+                                                      "key": "locale",
+                                                      "value": "ar",
+                                                      "disabled": true
+                                                },
+                                                {
+                                                      "key": "category_id",
+                                                      "value": "1",
+                                                      "disabled": true
+                                                },
+                                                {
+                                                      "key": "search",
+                                                      "value": "keyword",
+                                                      "disabled": true
+                                                },
+                                                {
+                                                      "key": "per_page",
+                                                      "value": "15"
+                                                },
+                                                {
+                                                      "key": "page",
+                                                      "value": "1"
+                                                }
+                                          ]
+                                    }
+                              },
+                              "response": []
+                        },
+                        {
+                              "name": "Get Article",
+                              "request": {
+                                    "method": "GET",
+                                    "header": [
+                                          {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                          }
+                                    ],
+                                    "url": {
+                                          "raw": "{{base_url}}/api/articles/1?locale=ar",
+                                          "host": [
+                                                "{{base_url}}"
+                                          ],
+                                          "path": [
+                                                "api",
+                                                "articles",
+                                                "1"
+                                          ],
+                                          "query": [
+                                                {
+                                                      "key": "locale",
+                                                      "value": "ar"
+                                                }
+                                          ]
+                                    }
+                              },
+                              "response": []
+                        },
+                        {
+                              "name": "Create Article",
+                              "request": {
+                                    "method": "POST",
+                                    "header": [
+                                          {
+                                                "key": "Authorization",
+                                                "value": "Bearer {{auth_token}}"
+                                          },
+                                          {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                          }
+                                    ],
+                                    "body": {
+                                          "mode": "raw",
+                                          "raw": "{\n    \"title_ar\": \"عنوان المقال\",\n    \"title_en\": \"Article Title\",\n    \"excerpt_ar\": \"ملخص المقال\",\n    \"excerpt_en\": \"Article Excerpt\",\n    \"content_ar\": \"محتوى المقال الكامل\",\n    \"content_en\": \"Full article content\",\n    \"introduction_ar\": \"مقدمة المقال\",\n    \"introduction_en\": \"Article Introduction\",\n    \"category_id\": 1,\n    \"is_published\": true,\n    \"published_at\": \"2024-12-01\",\n    \"attachments\": []\n}"
+                                    },
+                                    "url": {
+                                          "raw": "{{base_url}}/api/articles",
+                                          "host": [
+                                                "{{base_url}}"
+                                          ],
+                                          "path": [
+                                                "api",
+                                                "articles"
+                                          ]
+                                    }
+                              },
+                              "response": []
+                        },
+                        {
+                              "name": "Update Article",
+                              "request": {
+                                    "method": "PUT",
+                                    "header": [
+                                          {
+                                                "key": "Authorization",
+                                                "value": "Bearer {{auth_token}}"
+                                          },
+                                          {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                          },
+                                          {
+                                                "key": "Content-Type",
+                                                "value": "application/json"
+                                          }
+                                    ],
+                                    "body": {
+                                          "mode": "raw",
+                                          "raw": "{\n    \"title_ar\": \"عنوان محدث\",\n    \"title_en\": \"Updated Title\",\n    \"excerpt_ar\": \"ملخص محدث\",\n    \"excerpt_en\": \"Updated Excerpt\",\n    \"content_ar\": \"محتوى محدث\",\n    \"content_en\": \"Updated Content\",\n    \"category_id\": 1,\n    \"is_published\": true\n}"
+                                    },
+                                    "url": {
+                                          "raw": "{{base_url}}/api/articles/1",
+                                          "host": [
+                                                "{{base_url}}"
+                                          ],
+                                          "path": [
+                                                "api",
+                                                "articles",
+                                                "1"
+                                          ]
+                                    }
+                              },
+                              "response": []
+                        },
+                        {
+                              "name": "Delete Article",
+                              "request": {
+                                    "method": "DELETE",
+                                    "header": [
+                                          {
+                                                "key": "Authorization",
+                                                "value": "Bearer {{auth_token}}"
+                                          },
+                                          {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                          }
+                                    ],
+                                    "url": {
+                                          "raw": "{{base_url}}/api/articles/1",
+                                          "host": [
+                                                "{{base_url}}"
+                                          ],
+                                          "path": [
+                                                "api",
+                                                "articles",
+                                                "1"
+                                          ]
+                                    }
+                              },
+                              "response": []
+                        },
+                        {
+                              "name": "Get Article Categories",
+                              "request": {
+                                    "method": "GET",
+                                    "header": [
+                                          {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                          }
+                                    ],
+                                    "url": {
+                                          "raw": "{{base_url}}/api/articles/categories/list?locale=ar",
+                                          "host": [
+                                                "{{base_url}}"
+                                          ],
+                                          "path": [
+                                                "api",
+                                                "articles",
+                                                "categories",
+                                                "list"
+                                          ],
+                                          "query": [
+                                                {
+                                                      "key": "locale",
+                                                      "value": "ar"
+                                                }
+                                          ]
+                                    }
+                              },
+                              "response": []
+                        }
+                  ]
+            },
+            {
+                  "name": "Events",
+                  "item": [
+                        {
+                              "name": "List Events",
+                              "request": {
+                                    "method": "GET",
+                                    "header": [
+                                          {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                          }
+                                    ],
+                                    "url": {
+                                          "raw": "{{base_url}}/api/events?locale=ar&type=workshops&per_page=15",
+                                          "host": [
+                                                "{{base_url}}"
+                                          ],
+                                          "path": [
+                                                "api",
+                                                "events"
+                                          ],
+                                          "query": [
+                                                {
+                                                      "key": "locale",
+                                                      "value": "ar"
+                                                },
+                                                {
+                                                      "key": "type",
+                                                      "value": "workshops",
+                                                      "disabled": true
+                                                },
+                                                {
+                                                      "key": "per_page",
+                                                      "value": "15"
+                                                }
+                                          ]
+                                    }
+                              },
+                              "response": []
+                        },
+                        {
+                              "name": "Get Event",
+                              "request": {
+                                    "method": "GET",
+                                    "header": [
+                                          {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                          }
+                                    ],
+                                    "url": {
+                                          "raw": "{{base_url}}/api/events/1?locale=ar",
+                                          "host": [
+                                                "{{base_url}}"
+                                          ],
+                                          "path": [
+                                                "api",
+                                                "events",
+                                                "1"
+                                          ],
+                                          "query": [
+                                                {
+                                                      "key": "locale",
+                                                      "value": "ar"
+                                                }
+                                          ]
+                                    }
+                              },
+                              "response": []
+                        },
+                        {
+                              "name": "Create Event",
+                              "request": {
+                                    "method": "POST",
+                                    "header": [
+                                          {
+                                                "key": "Authorization",
+                                                "value": "Bearer {{auth_token}}"
+                                          },
+                                          {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                          },
+                                          {
+                                                "key": "Content-Type",
+                                                "value": "application/json"
+                                          }
+                                    ],
+                                    "body": {
+                                          "mode": "raw",
+                                          "raw": "{\n    \"title_ar\": \"عنوان الفعالية\",\n    \"title_en\": \"Event Title\",\n    \"type\": \"workshops\",\n    \"description_ar\": \"وصف الفعالية\",\n    \"description_en\": \"Event Description\",\n    \"full_description_ar\": \"وصف كامل\",\n    \"full_description_en\": \"Full Description\",\n    \"date\": \"2024-12-15\",\n    \"duration\": \"2 hours\",\n    \"location_ar\": \"الموقع\",\n    \"location_en\": \"Location\",\n    \"topics_ar\": [\"موضوع 1\", \"موضوع 2\"],\n    \"topics_en\": [\"Topic 1\", \"Topic 2\"],\n    \"speakers\": [{\n        \"name\": \"Speaker Name\",\n        \"title\": \"Speaker Title\"\n    }],\n    \"is_published\": true\n}"
+                                    },
+                                    "url": {
+                                          "raw": "{{base_url}}/api/events",
+                                          "host": [
+                                                "{{base_url}}"
+                                          ],
+                                          "path": [
+                                                "api",
+                                                "events"
+                                          ]
+                                    }
+                              },
+                              "response": []
+                        },
+                        {
+                              "name": "Update Event",
+                              "request": {
+                                    "method": "PUT",
+                                    "header": [
+                                          {
+                                                "key": "Authorization",
+                                                "value": "Bearer {{auth_token}}"
+                                          },
+                                          {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                          },
+                                          {
+                                                "key": "Content-Type",
+                                                "value": "application/json"
+                                          }
+                                    ],
+                                    "body": {
+                                          "mode": "raw",
+                                          "raw": "{\n    \"title_ar\": \"عنوان محدث\",\n    \"title_en\": \"Updated Title\",\n    \"type\": \"workshops\",\n    \"description_ar\": \"وصف محدث\",\n    \"description_en\": \"Updated Description\",\n    \"date\": \"2024-12-20\",\n    \"is_published\": true\n}"
+                                    },
+                                    "url": {
+                                          "raw": "{{base_url}}/api/events/1",
+                                          "host": [
+                                                "{{base_url}}"
+                                          ],
+                                          "path": [
+                                                "api",
+                                                "events",
+                                                "1"
+                                          ]
+                                    }
+                              },
+                              "response": []
+                        },
+                        {
+                              "name": "Delete Event",
+                              "request": {
+                                    "method": "DELETE",
+                                    "header": [
+                                          {
+                                                "key": "Authorization",
+                                                "value": "Bearer {{auth_token}}"
+                                          },
+                                          {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                          }
+                                    ],
+                                    "url": {
+                                          "raw": "{{base_url}}/api/events/1",
+                                          "host": [
+                                                "{{base_url}}"
+                                          ],
+                                          "path": [
+                                                "api",
+                                                "events",
+                                                "1"
+                                          ]
+                                    }
+                              },
+                              "response": []
+                        }
+                  ]
+            },
+            {
+                  "name": "Therapists",
+                  "item": [
+                        {
+                              "name": "List Therapists",
+                              "request": {
+                                    "method": "GET",
+                                    "header": [
+                                          {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                          }
+                                    ],
+                                    "url": {
+                                          "raw": "{{base_url}}/api/therapists?locale=ar&specialization=anxiety&gender=female&per_page=15",
+                                          "host": [
+                                                "{{base_url}}"
+                                          ],
+                                          "path": [
+                                                "api",
+                                                "therapists"
+                                          ],
+                                          "query": [
+                                                {
+                                                      "key": "locale",
+                                                      "value": "ar"
+                                                },
+                                                {
+                                                      "key": "specialization",
+                                                      "value": "anxiety",
+                                                      "disabled": true
+                                                },
+                                                {
+                                                      "key": "gender",
+                                                      "value": "female",
+                                                      "disabled": true
+                                                },
+                                                {
+                                                      "key": "per_page",
+                                                      "value": "15"
+                                                }
+                                          ]
+                                    }
+                              },
+                              "response": []
+                        },
+                        {
+                              "name": "Get Therapist",
+                              "request": {
+                                    "method": "GET",
+                                    "header": [
+                                          {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                          }
+                                    ],
+                                    "url": {
+                                          "raw": "{{base_url}}/api/therapists/1?locale=ar",
+                                          "host": [
+                                                "{{base_url}}"
+                                          ],
+                                          "path": [
+                                                "api",
+                                                "therapists",
+                                                "1"
+                                          ],
+                                          "query": [
+                                                {
+                                                      "key": "locale",
+                                                      "value": "ar"
+                                                }
+                                          ]
+                                    }
+                              },
+                              "response": []
+                        },
+                        {
+                              "name": "Create Therapist",
+                              "request": {
+                                    "method": "POST",
+                                    "header": [
+                                          {
+                                                "key": "Authorization",
+                                                "value": "Bearer {{auth_token}}"
+                                          },
+                                          {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                          },
+                                          {
+                                                "key": "Content-Type",
+                                                "value": "application/json"
+                                          }
+                                    ],
+                                    "body": {
+                                          "mode": "raw",
+                                          "raw": "{\n    \"user_id\": 2,\n    \"name_ar\": \"د. أحمد محمد\",\n    \"name_en\": \"Dr. Ahmed Mohammed\",\n    \"title_ar\": \"معالج نفسي\",\n    \"title_en\": \"Psychologist\",\n    \"description_ar\": \"وصف المعالج\",\n    \"description_en\": \"Therapist Description\",\n    \"bio_ar\": \"سيرة المعالج\",\n    \"bio_en\": \"Therapist Bio\",\n    \"gender\": \"male\",\n    \"rating\": 4.5,\n    \"rating_count\": 10,\n    \"whatsapp\": \"+967712345678\",\n    \"is_active\": true,\n    \"specializations\": [1, 2, 3]\n}"
+                                    },
+                                    "url": {
+                                          "raw": "{{base_url}}/api/therapists",
+                                          "host": [
+                                                "{{base_url}}"
+                                          ],
+                                          "path": [
+                                                "api",
+                                                "therapists"
+                                          ]
+                                    }
+                              },
+                              "response": []
+                        },
+                        {
+                              "name": "Update Therapist",
+                              "request": {
+                                    "method": "PUT",
+                                    "header": [
+                                          {
+                                                "key": "Authorization",
+                                                "value": "Bearer {{auth_token}}"
+                                          },
+                                          {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                          },
+                                          {
+                                                "key": "Content-Type",
+                                                "value": "application/json"
+                                          }
+                                    ],
+                                    "body": {
+                                          "mode": "raw",
+                                          "raw": "{\n    \"name_ar\": \"د. أحمد محمد محدث\",\n    \"name_en\": \"Dr. Ahmed Mohammed Updated\",\n    \"title_ar\": \"معالج نفسي\",\n    \"title_en\": \"Psychologist\",\n    \"rating\": 4.8,\n    \"specializations\": [1, 2]\n}"
+                                    },
+                                    "url": {
+                                          "raw": "{{base_url}}/api/therapists/1",
+                                          "host": [
+                                                "{{base_url}}"
+                                          ],
+                                          "path": [
+                                                "api",
+                                                "therapists",
+                                                "1"
+                                          ]
+                                    }
+                              },
+                              "response": []
+                        },
+                        {
+                              "name": "Delete Therapist",
+                              "request": {
+                                    "method": "DELETE",
+                                    "header": [
+                                          {
+                                                "key": "Authorization",
+                                                "value": "Bearer {{auth_token}}"
+                                          },
+                                          {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                          }
+                                    ],
+                                    "url": {
+                                          "raw": "{{base_url}}/api/therapists/1",
+                                          "host": [
+                                                "{{base_url}}"
+                                          ],
+                                          "path": [
+                                                "api",
+                                                "therapists",
+                                                "1"
+                                          ]
+                                    }
+                              },
+                              "response": []
+                        },
+                        {
+                              "name": "Get Specializations",
+                              "request": {
+                                    "method": "GET",
+                                    "header": [
+                                          {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                          }
+                                    ],
+                                    "url": {
+                                          "raw": "{{base_url}}/api/therapists/specializations/list?locale=ar",
+                                          "host": [
+                                                "{{base_url}}"
+                                          ],
+                                          "path": [
+                                                "api",
+                                                "therapists",
+                                                "specializations",
+                                                "list"
+                                          ],
+                                          "query": [
+                                                {
+                                                      "key": "locale",
+                                                      "value": "ar"
+                                                }
+                                          ]
+                                    }
+                              },
+                              "response": []
+                        }
+                  ]
+            },
+            {
+                  "name": "Library",
+                  "item": [
+                        {
+                              "name": "List Library Items",
+                              "request": {
+                                    "method": "GET",
+                                    "header": [
+                                          {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                          }
+                                    ],
+                                    "url": {
+                                          "raw": "{{base_url}}/api/library?locale=ar&category_id=1&type=book&per_page=15",
+                                          "host": [
+                                                "{{base_url}}"
+                                          ],
+                                          "path": [
+                                                "api",
+                                                "library"
+                                          ],
+                                          "query": [
+                                                {
+                                                      "key": "locale",
+                                                      "value": "ar"
+                                                },
+                                                {
+                                                      "key": "category_id",
+                                                      "value": "1",
+                                                      "disabled": true
+                                                },
+                                                {
+                                                      "key": "type",
+                                                      "value": "book",
+                                                      "disabled": true
+                                                },
+                                                {
+                                                      "key": "per_page",
+                                                      "value": "15"
+                                                }
+                                          ]
+                                    }
+                              },
+                              "response": []
+                        },
+                        {
+                              "name": "Get Library Item",
+                              "request": {
+                                    "method": "GET",
+                                    "header": [
+                                          {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                          }
+                                    ],
+                                    "url": {
+                                          "raw": "{{base_url}}/api/library/1?locale=ar",
+                                          "host": [
+                                                "{{base_url}}"
+                                          ],
+                                          "path": [
+                                                "api",
+                                                "library",
+                                                "1"
+                                          ],
+                                          "query": [
+                                                {
+                                                      "key": "locale",
+                                                      "value": "ar"
+                                                }
+                                          ]
+                                    }
+                              },
+                              "response": []
+                        },
+                        {
+                              "name": "Create Library Item",
+                              "request": {
+                                    "method": "POST",
+                                    "header": [
+                                          {
+                                                "key": "Authorization",
+                                                "value": "Bearer {{auth_token}}"
+                                          },
+                                          {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                          }
+                                    ],
+                                    "body": {
+                                          "mode": "formdata",
+                                          "formdata": [
+                                                {
+                                                      "key": "title_ar",
+                                                      "value": "عنوان الكتاب",
+                                                      "type": "text"
+                                                },
+                                                {
+                                                      "key": "title_en",
+                                                      "value": "Book Title",
+                                                      "type": "text"
+                                                },
+                                                {
+                                                      "key": "description_ar",
+                                                      "value": "وصف الكتاب",
+                                                      "type": "text"
+                                                },
+                                                {
+                                                      "key": "description_en",
+                                                      "value": "Book Description",
+                                                      "type": "text"
+                                                },
+                                                {
+                                                      "key": "author_ar",
+                                                      "value": "اسم المؤلف",
+                                                      "type": "text"
+                                                },
+                                                {
+                                                      "key": "author_en",
+                                                      "value": "Author Name",
+                                                      "type": "text"
+                                                },
+                                                {
+                                                      "key": "type",
+                                                      "value": "book",
+                                                      "type": "text"
+                                                },
+                                                {
+                                                      "key": "category_id",
+                                                      "value": "1",
+                                                      "type": "text"
+                                                },
+                                                {
+                                                      "key": "cover_image",
+                                                      "type": "file",
+                                                      "src": []
+                                                },
+                                                {
+                                                      "key": "file",
+                                                      "type": "file",
+                                                      "src": []
+                                                },
+                                                {
+                                                      "key": "pages",
+                                                      "value": "200",
+                                                      "type": "text"
+                                                },
+                                                {
+                                                      "key": "is_published",
+                                                      "value": "true",
+                                                      "type": "text"
+                                                }
+                                          ]
+                                    },
+                                    "url": {
+                                          "raw": "{{base_url}}/api/library",
+                                          "host": [
+                                                "{{base_url}}"
+                                          ],
+                                          "path": [
+                                                "api",
+                                                "library"
+                                          ]
+                                    }
+                              },
+                              "response": []
+                        },
+                        {
+                              "name": "Update Library Item",
+                              "request": {
+                                    "method": "PUT",
+                                    "header": [
+                                          {
+                                                "key": "Authorization",
+                                                "value": "Bearer {{auth_token}}"
+                                          },
+                                          {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                          },
+                                          {
+                                                "key": "Content-Type",
+                                                "value": "application/json"
+                                          }
+                                    ],
+                                    "body": {
+                                          "mode": "raw",
+                                          "raw": "{\n    \"title_ar\": \"عنوان محدث\",\n    \"title_en\": \"Updated Title\",\n    \"description_ar\": \"وصف محدث\",\n    \"description_en\": \"Updated Description\",\n    \"type\": \"book\",\n    \"category_id\": 1,\n    \"is_published\": true\n}"
+                                    },
+                                    "url": {
+                                          "raw": "{{base_url}}/api/library/1",
+                                          "host": [
+                                                "{{base_url}}"
+                                          ],
+                                          "path": [
+                                                "api",
+                                                "library",
+                                                "1"
+                                          ]
+                                    }
+                              },
+                              "response": []
+                        },
+                        {
+                              "name": "Delete Library Item",
+                              "request": {
+                                    "method": "DELETE",
+                                    "header": [
+                                          {
+                                                "key": "Authorization",
+                                                "value": "Bearer {{auth_token}}"
+                                          },
+                                          {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                          }
+                                    ],
+                                    "url": {
+                                          "raw": "{{base_url}}/api/library/1",
+                                          "host": [
+                                                "{{base_url}}"
+                                          ],
+                                          "path": [
+                                                "api",
+                                                "library",
+                                                "1"
+                                          ]
+                                    }
+                              },
+                              "response": []
+                        },
+                        {
+                              "name": "Get Library Categories",
+                              "request": {
+                                    "method": "GET",
+                                    "header": [
+                                          {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                          }
+                                    ],
+                                    "url": {
+                                          "raw": "{{base_url}}/api/library/categories/list?locale=ar",
+                                          "host": [
+                                                "{{base_url}}"
+                                          ],
+                                          "path": [
+                                                "api",
+                                                "library",
+                                                "categories",
+                                                "list"
+                                          ],
+                                          "query": [
+                                                {
+                                                      "key": "locale",
+                                                      "value": "ar"
+                                                }
+                                          ]
+                                    }
+                              },
+                              "response": []
+                        }
+                  ]
+            },
+            {
+                  "name": "Measures",
+                  "item": [
+                        {
+                              "name": "List Measures",
+                              "request": {
+                                    "method": "GET",
+                                    "header": [
+                                          {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                          }
+                                    ],
+                                    "url": {
+                                          "raw": "{{base_url}}/api/measures?locale=ar&category=women&per_page=15",
+                                          "host": [
+                                                "{{base_url}}"
+                                          ],
+                                          "path": [
+                                                "api",
+                                                "measures"
+                                          ],
+                                          "query": [
+                                                {
+                                                      "key": "locale",
+                                                      "value": "ar"
+                                                },
+                                                {
+                                                      "key": "category",
+                                                      "value": "women",
+                                                      "disabled": true
+                                                },
+                                                {
+                                                      "key": "per_page",
+                                                      "value": "15"
+                                                }
+                                          ]
+                                    }
+                              },
+                              "response": []
+                        },
+                        {
+                              "name": "Get Measure",
+                              "request": {
+                                    "method": "GET",
+                                    "header": [
+                                          {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                          }
+                                    ],
+                                    "url": {
+                                          "raw": "{{base_url}}/api/measures/1?locale=ar",
+                                          "host": [
+                                                "{{base_url}}"
+                                          ],
+                                          "path": [
+                                                "api",
+                                                "measures",
+                                                "1"
+                                          ],
+                                          "query": [
+                                                {
+                                                      "key": "locale",
+                                                      "value": "ar"
+                                                }
+                                          ]
+                                    }
+                              },
+                              "response": []
+                        },
+                        {
+                              "name": "Get Measure Questions",
+                              "request": {
+                                    "method": "GET",
+                                    "header": [
+                                          {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                          }
+                                    ],
+                                    "url": {
+                                          "raw": "{{base_url}}/api/measures/1/questions?locale=ar",
+                                          "host": [
+                                                "{{base_url}}"
+                                          ],
+                                          "path": [
+                                                "api",
+                                                "measures",
+                                                "1",
+                                                "questions"
+                                          ],
+                                          "query": [
+                                                {
+                                                      "key": "locale",
+                                                      "value": "ar"
+                                                }
+                                          ]
+                                    }
+                              },
+                              "response": []
+                        },
+                        {
+                              "name": "Submit Measure Response",
+                              "request": {
+                                    "method": "POST",
+                                    "header": [
+                                          {
+                                                "key": "Authorization",
+                                                "value": "Bearer {{auth_token}}"
+                                          },
+                                          {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                          },
+                                          {
+                                                "key": "Content-Type",
+                                                "value": "application/json"
+                                          }
+                                    ],
+                                    "body": {
+                                          "mode": "raw",
+                                          "raw": "{\n    \"answers\": [0, 1, 2, 1, 0, 2, 1, 2, 0, 1]\n}"
+                                    },
+                                    "url": {
+                                          "raw": "{{base_url}}/api/measures/1/submit",
+                                          "host": [
+                                                "{{base_url}}"
+                                          ],
+                                          "path": [
+                                                "api",
+                                                "measures",
+                                                "1",
+                                                "submit"
+                                          ]
+                                    }
+                              },
+                              "response": []
+                        },
+                        {
+                              "name": "Create Measure",
+                              "request": {
+                                    "method": "POST",
+                                    "header": [
+                                          {
+                                                "key": "Authorization",
+                                                "value": "Bearer {{auth_token}}"
+                                          },
+                                          {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                          },
+                                          {
+                                                "key": "Content-Type",
+                                                "value": "application/json"
+                                          }
+                                    ],
+                                    "body": {
+                                          "mode": "raw",
+                                          "raw": "{\n    \"key\": \"depression-scale\",\n    \"title_ar\": \"مقياس الاكتئاب\",\n    \"title_en\": \"Depression Scale\",\n    \"description_ar\": \"وصف المقياس\",\n    \"description_en\": \"Measure Description\",\n    \"category\": \"women\",\n    \"icon\": \"icon-name\",\n    \"time_required\": \"5-7 minutes\",\n    \"options\": {\n        \"ar\": [\"أبداً\", \"أحياناً\", \"غالباً\", \"دائماً\"],\n        \"en\": [\"Never\", \"Sometimes\", \"Often\", \"Always\"]\n    },\n    \"scores\": {\n        \"0\": 0,\n        \"1\": 1,\n        \"2\": 2,\n        \"3\": 3\n    },\n    \"interpretation_rules\": [\n        {\n            \"min_score\": 0,\n            \"max_score\": 10,\n            \"level\": \"low\",\n            \"desc_ar\": \"منخفض\",\n            \"desc_en\": \"Low\"\n        },\n        {\n            \"min_score\": 11,\n            \"max_score\": 20,\n            \"level\": \"moderate\",\n            \"desc_ar\": \"متوسط\",\n            \"desc_en\": \"Moderate\"\n        },\n        {\n            \"min_score\": 21,\n            \"max_score\": 30,\n            \"level\": \"high\",\n            \"desc_ar\": \"عالي\",\n            \"desc_en\": \"High\"\n        }\n    ],\n    \"is_active\": true,\n    \"questions\": [\n        {\n            \"question_ar\": \"سؤال 1\",\n            \"question_en\": \"Question 1\",\n            \"is_reverse_scored\": false\n        },\n        {\n            \"question_ar\": \"سؤال 2\",\n            \"question_en\": \"Question 2\",\n            \"is_reverse_scored\": false\n        }\n    ]\n}"
+                                    },
+                                    "url": {
+                                          "raw": "{{base_url}}/api/measures",
+                                          "host": [
+                                                "{{base_url}}"
+                                          ],
+                                          "path": [
+                                                "api",
+                                                "measures"
+                                          ]
+                                    }
+                              },
+                              "response": []
+                        },
+                        {
+                              "name": "Update Measure",
+                              "request": {
+                                    "method": "PUT",
+                                    "header": [
+                                          {
+                                                "key": "Authorization",
+                                                "value": "Bearer {{auth_token}}"
+                                          },
+                                          {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                          },
+                                          {
+                                                "key": "Content-Type",
+                                                "value": "application/json"
+                                          }
+                                    ],
+                                    "body": {
+                                          "mode": "raw",
+                                          "raw": "{\n    \"title_ar\": \"مقياس محدث\",\n    \"title_en\": \"Updated Measure\",\n    \"description_ar\": \"وصف محدث\",\n    \"description_en\": \"Updated Description\",\n    \"is_active\": true\n}"
+                                    },
+                                    "url": {
+                                          "raw": "{{base_url}}/api/measures/1",
+                                          "host": [
+                                                "{{base_url}}"
+                                          ],
+                                          "path": [
+                                                "api",
+                                                "measures",
+                                                "1"
+                                          ]
+                                    }
+                              },
+                              "response": []
+                        },
+                        {
+                              "name": "Delete Measure",
+                              "request": {
+                                    "method": "DELETE",
+                                    "header": [
+                                          {
+                                                "key": "Authorization",
+                                                "value": "Bearer {{auth_token}}"
+                                          },
+                                          {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                          }
+                                    ],
+                                    "url": {
+                                          "raw": "{{base_url}}/api/measures/1",
+                                          "host": [
+                                                "{{base_url}}"
+                                          ],
+                                          "path": [
+                                                "api",
+                                                "measures",
+                                                "1"
+                                          ]
+                                    }
+                              },
+                              "response": []
+                        }
+                  ]
+            },
+            {
+                  "name": "Appointments",
+                  "item": [
+                        {
+                              "name": "List Appointments",
+                              "request": {
+                                    "method": "GET",
+                                    "header": [
+                                          {
+                                                "key": "Authorization",
+                                                "value": "Bearer {{auth_token}}"
+                                          },
+                                          {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                          }
+                                    ],
+                                    "url": {
+                                          "raw": "{{base_url}}/api/appointments?status=scheduled&per_page=15",
+                                          "host": [
+                                                "{{base_url}}"
+                                          ],
+                                          "path": [
+                                                "api",
+                                                "appointments"
+                                          ],
+                                          "query": [
+                                                {
+                                                      "key": "status",
+                                                      "value": "scheduled",
+                                                      "disabled": true
+                                                },
+                                                {
+                                                      "key": "per_page",
+                                                      "value": "15"
+                                                }
+                                          ]
+                                    }
+                              },
+                              "response": []
+                        },
+                        {
+                              "name": "Get Appointment",
+                              "request": {
+                                    "method": "GET",
+                                    "header": [
+                                          {
+                                                "key": "Authorization",
+                                                "value": "Bearer {{auth_token}}"
+                                          },
+                                          {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                          }
+                                    ],
+                                    "url": {
+                                          "raw": "{{base_url}}/api/appointments/1",
+                                          "host": [
+                                                "{{base_url}}"
+                                          ],
+                                          "path": [
+                                                "api",
+                                                "appointments",
+                                                "1"
+                                          ]
+                                    }
+                              },
+                              "response": []
+                        },
+                        {
+                              "name": "Create Appointment",
+                              "request": {
+                                    "method": "POST",
+                                    "header": [
+                                          {
+                                                "key": "Authorization",
+                                                "value": "Bearer {{auth_token}}"
+                                          },
+                                          {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                          },
+                                          {
+                                                "key": "Content-Type",
+                                                "value": "application/json"
+                                          }
+                                    ],
+                                    "body": {
+                                          "mode": "raw",
+                                          "raw": "{\n    \"therapist_id\": 1,\n    \"starts_at\": \"2024-12-01 10:00:00\",\n    \"ends_at\": \"2024-12-01 11:00:00\",\n    \"notes\": \"Initial consultation\"\n}"
+                                    },
+                                    "url": {
+                                          "raw": "{{base_url}}/api/appointments",
+                                          "host": [
+                                                "{{base_url}}"
+                                          ],
+                                          "path": [
+                                                "api",
+                                                "appointments"
+                                          ]
+                                    }
+                              },
+                              "response": []
+                        },
+                        {
+                              "name": "Update Appointment",
+                              "request": {
+                                    "method": "PUT",
+                                    "header": [
+                                          {
+                                                "key": "Authorization",
+                                                "value": "Bearer {{auth_token}}"
+                                          },
+                                          {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                          },
+                                          {
+                                                "key": "Content-Type",
+                                                "value": "application/json"
+                                          }
+                                    ],
+                                    "body": {
+                                          "mode": "raw",
+                                          "raw": "{\n    \"status\": \"completed\",\n    \"notes\": \"Session completed successfully\"\n}"
+                                    },
+                                    "url": {
+                                          "raw": "{{base_url}}/api/appointments/1",
+                                          "host": [
+                                                "{{base_url}}"
+                                          ],
+                                          "path": [
+                                                "api",
+                                                "appointments",
+                                                "1"
+                                          ]
+                                    }
+                              },
+                              "response": []
+                        },
+                        {
+                              "name": "Delete Appointment",
+                              "request": {
+                                    "method": "DELETE",
+                                    "header": [
+                                          {
+                                                "key": "Authorization",
+                                                "value": "Bearer {{auth_token}}"
+                                          },
+                                          {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                          }
+                                    ],
+                                    "url": {
+                                          "raw": "{{base_url}}/api/appointments/1",
+                                          "host": [
+                                                "{{base_url}}"
+                                          ],
+                                          "path": [
+                                                "api",
+                                                "appointments",
+                                                "1"
+                                          ]
+                                    }
+                              },
+                              "response": []
+                        }
+                  ]
+            },
+            {
+                  "name": "Programs",
+                  "item": [
+                        {
+                              "name": "List Programs",
+                              "request": {
+                                    "method": "GET",
+                                    "header": [
+                                          {
+                                                "key": "Authorization",
+                                                "value": "Bearer {{auth_token}}"
+                                          },
+                                          {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                          }
+                                    ],
+                                    "url": {
+                                          "raw": "{{base_url}}/api/programs?locale=ar&per_page=15",
+                                          "host": [
+                                                "{{base_url}}"
+                                          ],
+                                          "path": [
+                                                "api",
+                                                "programs"
+                                          ],
+                                          "query": [
+                                                {
+                                                      "key": "locale",
+                                                      "value": "ar"
+                                                },
+                                                {
+                                                      "key": "per_page",
+                                                      "value": "15"
+                                                }
+                                          ]
+                                    }
+                              },
+                              "response": []
+                        },
+                        {
+                              "name": "Get Program",
+                              "request": {
+                                    "method": "GET",
+                                    "header": [
+                                          {
+                                                "key": "Authorization",
+                                                "value": "Bearer {{auth_token}}"
+                                          },
+                                          {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                          }
+                                    ],
+                                    "url": {
+                                          "raw": "{{base_url}}/api/programs/1?locale=ar",
+                                          "host": [
+                                                "{{base_url}}"
+                                          ],
+                                          "path": [
+                                                "api",
+                                                "programs",
+                                                "1"
+                                          ],
+                                          "query": [
+                                                {
+                                                      "key": "locale",
+                                                      "value": "ar"
+                                                }
+                                          ]
+                                    }
+                              },
+                              "response": []
+                        },
+                        {
+                              "name": "Create Program",
+                              "request": {
+                                    "method": "POST",
+                                    "header": [
+                                          {
+                                                "key": "Authorization",
+                                                "value": "Bearer {{auth_token}}"
+                                          },
+                                          {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                          },
+                                          {
+                                                "key": "Content-Type",
+                                                "value": "application/json"
+                                          }
+                                    ],
+                                    "body": {
+                                          "mode": "raw",
+                                          "raw": "{\n    \"title_ar\": \"برنامج العلاج\",\n    \"title_en\": \"Treatment Program\",\n    \"description_ar\": \"وصف البرنامج\",\n    \"description_en\": \"Program Description\",\n    \"content_ar\": \"محتوى البرنامج\",\n    \"content_en\": \"Program Content\",\n    \"is_published\": true,\n    \"sessions\": [\n        {\n            \"title_ar\": \"الجلسة الأولى\",\n            \"title_en\": \"First Session\",\n            \"description_ar\": \"وصف الجلسة\",\n            \"description_en\": \"Session Description\",\n            \"content_ar\": \"محتوى الجلسة\",\n            \"content_en\": \"Session Content\"\n        },\n        {\n            \"title_ar\": \"الجلسة الثانية\",\n            \"title_en\": \"Second Session\",\n            \"description_ar\": \"وصف الجلسة\",\n            \"description_en\": \"Session Description\",\n            \"content_ar\": \"محتوى الجلسة\",\n            \"content_en\": \"Session Content\"\n        }\n    ]\n}"
+                                    },
+                                    "url": {
+                                          "raw": "{{base_url}}/api/programs",
+                                          "host": [
+                                                "{{base_url}}"
+                                          ],
+                                          "path": [
+                                                "api",
+                                                "programs"
+                                          ]
+                                    }
+                              },
+                              "response": []
+                        },
+                        {
+                              "name": "Update Program",
+                              "request": {
+                                    "method": "PUT",
+                                    "header": [
+                                          {
+                                                "key": "Authorization",
+                                                "value": "Bearer {{auth_token}}"
+                                          },
+                                          {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                          },
+                                          {
+                                                "key": "Content-Type",
+                                                "value": "application/json"
+                                          }
+                                    ],
+                                    "body": {
+                                          "mode": "raw",
+                                          "raw": "{\n    \"title_ar\": \"برنامج محدث\",\n    \"title_en\": \"Updated Program\",\n    \"description_ar\": \"وصف محدث\",\n    \"description_en\": \"Updated Description\",\n    \"is_published\": true\n}"
+                                    },
+                                    "url": {
+                                          "raw": "{{base_url}}/api/programs/1",
+                                          "host": [
+                                                "{{base_url}}"
+                                          ],
+                                          "path": [
+                                                "api",
+                                                "programs",
+                                                "1"
+                                          ]
+                                    }
+                              },
+                              "response": []
+                        },
+                        {
+                              "name": "Delete Program",
+                              "request": {
+                                    "method": "DELETE",
+                                    "header": [
+                                          {
+                                                "key": "Authorization",
+                                                "value": "Bearer {{auth_token}}"
+                                          },
+                                          {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                          }
+                                    ],
+                                    "url": {
+                                          "raw": "{{base_url}}/api/programs/1",
+                                          "host": [
+                                                "{{base_url}}"
+                                          ],
+                                          "path": [
+                                                "api",
+                                                "programs",
+                                                "1"
+                                          ]
+                                    }
+                              },
+                              "response": []
+                        }
+                  ]
+            },
+            {
+                  "name": "Legal Resources",
+                  "item": [
+                        {
+                              "name": "List Legal Resources",
+                              "request": {
+                                    "method": "GET",
+                                    "header": [
+                                          {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                          }
+                                    ],
+                                    "url": {
+                                          "raw": "{{base_url}}/api/legal-resources?locale=ar&law_type=constitution&category_id=1&per_page=15",
+                                          "host": [
+                                                "{{base_url}}"
+                                          ],
+                                          "path": [
+                                                "api",
+                                                "legal-resources"
+                                          ],
+                                          "query": [
+                                                {
+                                                      "key": "locale",
+                                                      "value": "ar"
+                                                },
+                                                {
+                                                      "key": "law_type",
+                                                      "value": "constitution",
+                                                      "disabled": true
+                                                },
+                                                {
+                                                      "key": "category_id",
+                                                      "value": "1",
+                                                      "disabled": true
+                                                },
+                                                {
+                                                      "key": "per_page",
+                                                      "value": "15"
+                                                }
+                                          ]
+                                    }
+                              },
+                              "response": []
+                        },
+                        {
+                              "name": "Get Legal Resource",
+                              "request": {
+                                    "method": "GET",
+                                    "header": [
+                                          {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                          }
+                                    ],
+                                    "url": {
+                                          "raw": "{{base_url}}/api/legal-resources/1?locale=ar",
+                                          "host": [
+                                                "{{base_url}}"
+                                          ],
+                                          "path": [
+                                                "api",
+                                                "legal-resources",
+                                                "1"
+                                          ],
+                                          "query": [
+                                                {
+                                                      "key": "locale",
+                                                      "value": "ar"
+                                                }
+                                          ]
+                                    }
+                              },
+                              "response": []
+                        },
+                        {
+                              "name": "Create Legal Resource",
+                              "request": {
+                                    "method": "POST",
+                                    "header": [
+                                          {
+                                                "key": "Authorization",
+                                                "value": "Bearer {{auth_token}}"
+                                          },
+                                          {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                          },
+                                          {
+                                                "key": "Content-Type",
+                                                "value": "application/json"
+                                          }
+                                    ],
+                                    "body": {
+                                          "mode": "raw",
+                                          "raw": "{\n    \"law_type\": \"constitution\",\n    \"article_number_ar\": \"المادة 1\",\n    \"article_number_en\": \"Article 1\",\n    \"text_ar\": \"نص المادة\",\n    \"text_en\": \"Article Text\",\n    \"category_id\": 1\n}"
+                                    },
+                                    "url": {
+                                          "raw": "{{base_url}}/api/legal-resources",
+                                          "host": [
+                                                "{{base_url}}"
+                                          ],
+                                          "path": [
+                                                "api",
+                                                "legal-resources"
+                                          ]
+                                    }
+                              },
+                              "response": []
+                        },
+                        {
+                              "name": "Update Legal Resource",
+                              "request": {
+                                    "method": "PUT",
+                                    "header": [
+                                          {
+                                                "key": "Authorization",
+                                                "value": "Bearer {{auth_token}}"
+                                          },
+                                          {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                          },
+                                          {
+                                                "key": "Content-Type",
+                                                "value": "application/json"
+                                          }
+                                    ],
+                                    "body": {
+                                          "mode": "raw",
+                                          "raw": "{\n    \"text_ar\": \"نص محدث\",\n    \"text_en\": \"Updated Text\",\n    \"category_id\": 1\n}"
+                                    },
+                                    "url": {
+                                          "raw": "{{base_url}}/api/legal-resources/1",
+                                          "host": [
+                                                "{{base_url}}"
+                                          ],
+                                          "path": [
+                                                "api",
+                                                "legal-resources",
+                                                "1"
+                                          ]
+                                    }
+                              },
+                              "response": []
+                        },
+                        {
+                              "name": "Delete Legal Resource",
+                              "request": {
+                                    "method": "DELETE",
+                                    "header": [
+                                          {
+                                                "key": "Authorization",
+                                                "value": "Bearer {{auth_token}}"
+                                          },
+                                          {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                          }
+                                    ],
+                                    "url": {
+                                          "raw": "{{base_url}}/api/legal-resources/1",
+                                          "host": [
+                                                "{{base_url}}"
+                                          ],
+                                          "path": [
+                                                "api",
+                                                "legal-resources",
+                                                "1"
+                                          ]
+                                    }
+                              },
+                              "response": []
+                        }
+                  ]
+            },
+            {
+                  "name": "Dashboard",
+                  "item": [
+                        {
+                              "name": "Get Dashboard Stats",
+                              "request": {
+                                    "method": "GET",
+                                    "header": [
+                                          {
+                                                "key": "Authorization",
+                                                "value": "Bearer {{auth_token}}"
+                                          },
+                                          {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                          }
+                                    ],
+                                    "url": {
+                                          "raw": "{{base_url}}/api/dashboard/stats",
+                                          "host": [
+                                                "{{base_url}}"
+                                          ],
+                                          "path": [
+                                                "api",
+                                                "dashboard",
+                                                "stats"
+                                          ]
+                                    }
+                              },
+                              "response": []
+                        }
+                  ]
+            }
+      ],
+      "variable": [
+            {
+                  "key": "base_url",
+                  "value": "http://localhost:8000",
+                  "type": "string"
+            },
+            {
+                  "key": "auth_token",
+                  "value": "",
+                  "type": "string"
+            },
+            {
+                  "key": "user_id",
+                  "value": "",
+                  "type": "string"
+            }
+      ]
+}

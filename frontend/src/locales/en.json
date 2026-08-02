@@ -1,0 +1,358 @@
+
+{
+  "programs": {
+    "hero": {
+      "title": "Psychological",
+      "highlight": "Support Programs",
+      "subtitle": "Professional psychological programs designed to support your mental wellness journey"
+    },
+    "section": {
+      "title": "Our Psychological Programs",
+      "subtitle": "Choose from our range of evidence-based psychological support programs"
+    },
+    "featured": "Featured",
+    "popular": "Popular",
+    "new": "New",
+    "online": "Online",
+    "emergency": "Emergency",
+    
+    "duration": "Duration",
+    "frequency": "Frequency",
+    "modality": "Modality",
+    
+    "counseling": {
+      "title": "Individual Counseling",
+      "description": "One-on-one sessions with licensed psychologists",
+      "duration": "8 sessions",
+      "frequency": "Weekly",
+      "modality": "Individual"
+    },
+    
+    "stress": {
+      "title": "Stress Management",
+      "description": "Learn techniques to manage stress and anxiety",
+      "duration": "12 sessions",
+      "frequency": "Weekly",
+      "modality": "Group"
+    },
+    
+    "group": {
+      "title": "Group Therapy",
+      "description": "Supportive group sessions with shared experiences",
+      "duration": "10 sessions",
+      "frequency": "Weekly",
+      "modality": "Group"
+    },
+    
+    "children": {
+      "title": "Child & Adolescent",
+      "description": "Specialized programs for children and teenagers",
+      "duration": "16 sessions",
+      "frequency": "Twice weekly",
+      "modality": "Individual"
+    },
+    
+    "online": {
+      "title": "Online Therapy",
+      "description": "Flexible online counseling sessions",
+      "duration": "12 sessions",
+      "frequency": "Weekly",
+      "modality": "Online"
+    },
+    
+    "emergency": {
+      "title": "Crisis Support",
+      "description": "Immediate psychological support for emergencies",
+      "duration": "As needed",
+      "frequency": "24/7",
+      "modality": "Emergency"
+    },
+    
+    "freeServices": {
+      "title": "All Programs Are Free",
+      "subtitle": "No charges for any psychological support services"
+    },
+    
+    "howToApply": {
+      "title": "How to Apply",
+      "subtitle": "Simple steps to start your psychological support journey"
+    },
+    
+    "steps": {
+      "apply": "Apply Online",
+      "applyDesc": "Submit your application for the chosen program",
+      "assessment": "Initial Assessment",
+      "assessmentDesc": "Complete assessment with our psychologists",
+      "start": "Start Sessions",
+      "startDesc": "Begin your therapeutic sessions"
+    }
+  },
+  
+  "buttons": {
+    "startJourney": "Start Your Journey",
+    "learnMore": "Learn More",
+    "applyNow": "Apply Now",
+    "emergencyCall": "Emergency Call"
+  },
+
+  "app": {
+    "title": "Psychology Admin",
+    "search": "Search…",
+    "language": "Language",
+    "theme": "Theme",
+    "light": "Light",
+    "dark": "Dark"
+  },
+  "nav": {
+    "programs": "Programs",
+    "allPrograms": "All Programs",
+    "programCategories": "Program Categories",
+    "newProgram": "New Program",
+    "dashboard": "Dashboard",
+    "appointments": "Appointments",
+    "sessions": "Sessions",
+    "users": "Users",
+    "articles": "Articles",
+   
+    "library": "Library",
+    "events": "Events",
+    "assessments": "Assessments",
+    "assessmentCategories": "Assessment Categories",
+    "assessmentTypes": "Assessment Types",
+    "assessmentResults": "Assessment Results",
+    "legalResources": "Legal Resources",
+    "settings": "Settings",
+    "dashboardMain": "Main Dashboard",
+    "stats": "Statistics",
+    "reports": "Reports",
+    "allAppointments": "All Appointments",
+    "upcomingAppointments": "Upcoming Appointments",
+    "appointmentHistory": "Appointment History",
+    "allSessions": "All Sessions",
+    "activeSessions": "Active Sessions",
+    "sessionHistory": "Session History",
+    "allUsers": "All Users",
+    "clients": "Clients",
+    "therapists": "Therapists",
+    "admins": "Admins",
+    "allArticles": "All Articles",
+    "articleCategories": "Article Categories",
+    "allPrograms": "All Programs",
+    "therapyPrograms": "Therapy Programs",
+    "workshops": "Workshops",
+    "mainLibrary": "Main Library",
+    "books": "Books",
+    "resources": "Resources",
+    "media": "Media",
+    "siteStats": "Success Numbers",
+    "userMessages": "User Messages",
+    "allEvents": "All Events",
+    "allLegalResources": "All Resources",
+    "legalCategories": "Legal Categories",
+    "newLegalResource": "New Resource",
+    "allAssessments": "All Assessments",
+    "scaleCategories": "Scale Categories",
+    "assessmentResults": "Assessment Results",
+    "generalSettings": "General Settings",
+    "profile": "Profile",
+    "security": "Security",
+    "notifications": "Notifications"
+  },
+  "loginModal": {
+    "emailPlaceholder": "Enter your email address",
+    "invalidCredentials": "Incorrect email or password",
+    "errorMessage": "An error occurred while logging in. Please try again.",
+    "successMessage": "Logged in successfully"
+  },
+  "therapists": {
+    "therapist": {
+      "book": "Book",
+      "sessionDuration": "Session Duration",
+      "minutes": "minutes",
+      "sessions": "session",
+      "reviews": "review",
+      "noRating": "No rating yet"
+    },
+    "hero": {
+      "title": "Specialists",
+      "highlight": "Experts",
+      "subtitle": "Choose the right therapist for you"
+    },
+    "results": {
+      "showing": "Showing {count} therapists",
+      "noResults": "No results found",
+      "noResultsMessage": "Try adjusting your filters",
+      "showAll": "Show all"
+    },
+    "specializations": {
+      "anxiety": "Anxiety & Stress",
+      "depression": "Depression",
+      "ocd": "OCD",
+      "addiction": "Addiction",
+      "psychosomatic": "Psychosomatic Disorders",
+      "confidence": "Low Self-Confidence",
+      "teenagers": "Teenage Problems",
+      "specialEducation": "Special Education",
+      "therapeutic": "Therapeutic",
+      "various": "Various Issues"
+    }
+  },
+  "therapistProfile": {
+    "breadcrumb": {
+      "home": "Home",
+      "therapists": "Therapists"
+    },
+    "profile": {
+      "affiliation": "Affiliation",
+      "sessionDuration": "Session Duration",
+      "minutes": "minutes",
+      "aboutExpert": "About the Expert",
+      "qualifications": "Qualifications",
+      "reviews": "review",
+      "sessions": "session",
+      "noRating": "No rating yet"
+    },
+    "booking": {
+      "bookingSuccess": "Booking successful",
+      "date": "Date",
+      "time": "Time",
+      "noDateSelected": "Please select date and time"
+    },
+    "calendar": {
+      "months": "January,February,March,April,May,June,July,August,September,October,November,December",
+      "daysOfWeek": "Sun,Mon,Tue,Wed,Thu,Fri,Sat"
+    }
+  },
+  "buttons": {
+    "startJourney": "Start Your Journey",
+    "learnMore": "Learn More"
+  },
+  "dashboard": {
+    "welcome": "Welcome",
+    "kpi_upcoming": "Upcoming Sessions",
+    "kpi_clients": "Clients",
+    "kpi_new_users": "New Users",
+    "quick_actions": "Quick Actions",
+    "book_session": "Book Session",
+    "create_article": "Create Article",
+    "add_user": "Add User"
+  },
+  "appointments": {
+    "bookSession": "Book Session",
+    "allStatuses": "All Statuses",
+    "scheduled": "Scheduled",
+    "completed": "Completed",
+    "cancelled": "Cancelled",
+    "pending": "Pending",
+    "confirmed": "Confirmed",
+    "therapist": "Therapist",
+    "loading": "Loading...",
+    "list": "Appointments List",
+    "client": "Client",
+    "date": "Date",
+    "status": "Status",
+    "actions": "Actions",
+    "edit": "Edit",
+    "createSession": "Create Session",
+    "noAppointments": "No appointments found",
+    "editAppointment": "Edit Appointment",
+    "selectClient": "Select client",
+    "selectTherapist": "Select therapist",
+    "dateTime": "Date & Time",
+    "cancel": "Cancel",
+    "save": "Save",
+    "saving": "Saving...",
+    "selectDateTime": "Please select date and time",
+    "saveError": "Error saving",
+    "confirmCreateSession": "Do you want to create a video session for the appointment with {name}?",
+    "sessionCreated": "Session created successfully! You can now start the session from the sessions page.",
+    "sessionCreateError": "Failed to create session",
+    "allTherapists": "All therapists",
+    "allClients": "All clients",
+    "loadingClients": "Loading clients...",
+    "loadingTherapists": "Loading therapists...",
+    "selectClientAndTherapist": "Please select both client and therapist first"
+  },
+  "library": {
+    "title": "Library",
+    "subtitle": "Comprehensive collection of psychological resources and references",
+    "total_items": "Total Items",
+    "total_downloads": "Total Downloads",
+    "new_this_week": "New This Week",
+    "avg_rating": "Average Rating",
+    "search_placeholder": "Search in library...",
+    "all_categories": "All Categories",
+    "all_types": "All Types",
+    "books": "Books",
+    "research": "Research",
+    "guides": "Guides",
+    "articles": "Articles",
+    "clear_all": "Clear All",
+    "showing": "Showing",
+    "of": "of",
+    "no_results": "No Results Found",
+    "no_results_desc": "Try adjusting your filters or search terms",
+    "clear_filters": "Clear Filters",
+    "sort": {
+      "newest": "Newest",
+      "popular": "Most Popular",
+      "rating": "Highest Rated",
+      "title": "By Title"
+    },
+    "types": {
+      "book": "Book",
+      "research": "Research",
+      "guide": "Guide",
+      "article": "Article"
+    },
+    "upload": {
+      "title": "Upload New File",
+      "subtitle": "Add a new resource to the library",
+      "complete": "Complete",
+      "dropzone_title": "Drag and drop file here",
+      "dropzone_subtitle": "PDF, Word, Images, Videos (Max 50MB)",
+      "browse_files": "Browse Files",
+      "remove_file": "Remove File",
+      "title_ar": "Title (Arabic)",
+      "title_ar_placeholder": "Enter title in Arabic...",
+      "title_en": "Title (English)",
+      "title_en_placeholder": "Enter title in English...",
+      "category": "Category",
+      "select_category": "Select Category",
+      "type": "Type",
+      "select_type": "Select Type",
+      "author_ar": "Author (Arabic)",
+      "author_ar_placeholder": "Author name in Arabic...",
+      "author_en": "Author (English)",
+      "author_en_placeholder": "Author name in English...",
+      "publish_date": "Publish Date",
+      "pages": "Number of Pages",
+      "pages_placeholder": "Enter number of pages...",
+      "description_ar": "Description (Arabic)",
+      "description_ar_placeholder": "Enter description in Arabic...",
+      "description_en": "Description (English)",
+      "description_en_placeholder": "Enter description in English...",
+      "cover_image": "Cover Image",
+      "cover_upload": "Upload Cover Image",
+      "cover_formats": "JPG, PNG, WebP (Recommended 3:4)",
+      "mark_as_new": "Mark as New Resource",
+      "publish_immediately": "Publish Immediately",
+      "supported_formats": "PDF, DOC, DOCX, JPG, PNG, MP4, MOV (Max 50MB)",
+      "cancel": "Cancel",
+      "uploading": "Uploading...",
+      "upload": "Upload File",
+      "edit_title": "Update item",
+      "edit_subtitle": "Uadate data item",
+      "update": "Update"
+    }
+  },
+  "contact": {
+    "form": {
+      "types": {
+        "complaint": "Complaint",
+        "inquiry": "Inquiry",
+        "review": "Feedback"
+      }
+    }
+  }
+}
