@@ -112,7 +112,7 @@ import { useNotifications } from '@/composables/useNotifications'
 import { useProfile } from '@/composables/useProfile'
 import api from '@/utils/api'
 import { t } from '@/locales'
-import Footer from '@/components/frontend/layouts/Footer.vue' 
+import Footer from '@/components/frontend/layouts/footer.vue' 
 
 const router = useRouter()
 const route = useRoute()
